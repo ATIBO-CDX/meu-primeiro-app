@@ -43,7 +43,7 @@
       <section class="hero" id="hero">
         <div class="hero__content" data-animate>
           <p class="eyebrow"><span></span> Copywriting estratégico para marcas premium</p>
-          <h1>Copy com clareza de startup, estética premium e foco em conversão.</h1>
+          <h1>Transforme visitantes em clientes com copy estratégica focada em conversão.</h1>
           <p class="hero__lead">
             Posiciono sua oferta com mensagens que parecem simples, sofisticadas e inevitáveis — do primeiro clique ao “quero comprar”.
           </p>
@@ -178,6 +178,43 @@
         </div>
       </section>
 
+      <section class="section why" id="why">
+        <div class="section__heading" data-animate>
+          <p class="eyebrow"><span></span> Porquê escolher-me?</p>
+          <h2>Execução premium com foco real em resultado.</h2>
+        </div>
+        <div class="why-grid">
+          <article class="why-card" data-animate>
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5l2-5 3 10 2-5h4" /></svg>
+            </span>
+            <h3>Estratégia orientada para conversão</h3>
+            <p>Cada estrutura é pensada para reduzir fricção e aumentar decisões de compra.</p>
+          </article>
+          <article class="why-card" data-animate>
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14M7 15l3-3 2 2 5-6" /></svg>
+            </span>
+            <h3>Copy orientada para performance</h3>
+            <p>Mensagens alinhadas a métricas de campanha, funil e retorno sobre investimento.</p>
+          </article>
+          <article class="why-card" data-animate>
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M12 3v18" /></svg>
+            </span>
+            <h3>Processo rápido e colaborativo</h3>
+            <p>Fluxo claro de briefing, validação e entrega para acelerar implementação.</p>
+          </article>
+          <article class="why-card" data-animate>
+            <span class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v10H4zM8 20h8" /></svg>
+            </span>
+            <h3>Comunicação clara e profissional</h3>
+            <p>Alinhamento constante, decisões objetivas e linguagem estratégica sem ruído.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section method" id="method">
         <div class="section__heading" data-animate>
           <p class="eyebrow"><span></span> Método</p>
@@ -270,10 +307,20 @@
             <input id="email" name="email" type="email" placeholder="voce@email.com" autocomplete="email" required />
           </div>
           <div class="form-field">
+            <label for="budget">Orçamento estimado</label>
+            <select id="budget" name="budget" required>
+              <option value="" disabled selected>Selecione uma faixa</option>
+              <option>Até 100 USD</option>
+              <option>100–300 USD</option>
+              <option>300–700 USD</option>
+              <option>Projeto Premium</option>
+            </select>
+          </div>
+          <div class="form-field">
             <label for="message">Mensagem</label>
             <textarea id="message" name="message" rows="5" placeholder="Conte sobre sua oferta, objetivo e prazo ideal" required></textarea>
           </div>
-          <button class="btn btn--primary form-submit" type="submit">Enviar mensagem</button>
+          <button class="btn btn--primary form-submit" type="submit">Solicitar diagnóstico estratégico</button>
           <p class="form-feedback" role="status" aria-live="polite"></p>
         </form>
       </section>
@@ -298,5 +345,7 @@
     </a>
 
     <script src="script.js"></script>
+  </body>
+</html>
   </body>
 </html>
