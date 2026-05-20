@@ -2,7 +2,7 @@ const animatedElements = document.querySelectorAll('[data-animate]');
 const contactForm = document.querySelector('.contact-form');
 const formFeedback = document.querySelector('.form-feedback');
 const cursorGlow = document.querySelector('.cursor-glow');
-const interactiveCards = document.querySelectorAll('.service-card, .about-card, .method-timeline article, .testimonial-card, .contact-form');
+const interactiveCards = document.querySelectorAll('.service-card, .about-card, .why-card, .method-timeline article, .testimonial-card, .contact-form');
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -35,6 +35,7 @@ contactForm?.addEventListener('submit', (event) => {
     'Olá, quero falar sobre um projeto de copywriting.',
     `Nome: ${formData.get('name')}`,
     `Email: ${formData.get('email')}`,
+    `Orçamento: ${formData.get('budget')}`,
     `Mensagem: ${formData.get('message')}`,
   ].join('\n');
 
@@ -64,4 +65,5 @@ interactiveCards.forEach((card) => {
     card.style.setProperty('--mx', `${x}%`);
     card.style.setProperty('--my', `${y}%`);
   });
+});
 });
