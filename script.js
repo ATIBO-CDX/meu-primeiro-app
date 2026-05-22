@@ -67,6 +67,3 @@ interactiveCards.forEach((card) => {
     card.style.setProperty('--my', `${y}%`);
   });
 });
-
-  });
-});
