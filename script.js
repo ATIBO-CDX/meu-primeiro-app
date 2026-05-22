@@ -4,6 +4,7 @@ const formFeedback = document.querySelector('.form-feedback');
 const cursorGlow = document.querySelector('.cursor-glow');
 const interactiveCards = document.querySelectorAll('.service-card, .about-card, .why-card, .method-timeline article, .testimonial-card, .contact-form');
 
+
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -64,5 +65,8 @@ interactiveCards.forEach((card) => {
 
     card.style.setProperty('--mx', `${x}%`);
     card.style.setProperty('--my', `${y}%`);
+  });
+});
+
   });
 });
