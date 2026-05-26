@@ -195,15 +195,15 @@ progress + "%";
 // VOLTAR AO TOPO
 
 const backToTop =
-document.querySelector(
-".back-to-top"
-);
+document.querySelector(".back-to-top");
+
+if(backToTop){
 
 window.addEventListener(
 "scroll",
-()=>{
+function(){
 
-if(window.scrollY > 500){
+if(window.scrollY > 300){
 
 backToTop.classList.add(
 "show"
@@ -222,7 +222,7 @@ backToTop.classList.remove(
 
 backToTop.addEventListener(
 "click",
-()=>{
+function(){
 
 window.scrollTo({
 
@@ -232,5 +232,6 @@ behavior:"smooth"
 
 });
 
+});
+
 }
-);
