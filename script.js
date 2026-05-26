@@ -69,62 +69,39 @@ interactiveCards.forEach((card) => {
 });
 
 // FAQ INTERATIVO
-
 const faqItems = document.querySelectorAll(".faq-item");
-
 faqItems.forEach(item => {
-
 const button = item.querySelector(".faq-question");
-
 button.addEventListener("click", () => {
-
 const activeItem =
 document.querySelector(".faq-item.active");
-
 if(activeItem && activeItem !== item){
-
 activeItem.classList.remove("active");
-
 }
 
 item.classList.toggle("active");
-
 });
-
 });
 
 // RESULTADOS ANIMADOS
-
 const counters =
 document.querySelectorAll(".counter");
-
 const observer =
 new IntersectionObserver((entries)=>{
-
 entries.forEach(entry=>{
-
 if(entry.isIntersecting){
-
 const counter =
 entry.target;
-
 const target =
 +counter.dataset.target;
-
 let current = 0;
-
 const increment =
 target / 60;
-
 function updateCounter(){
-
 if(current < target){
-
 current += increment;
-
 counter.innerText =
 Math.ceil(current);
-
 requestAnimationFrame(
 updateCounter
 );
@@ -133,37 +110,25 @@ updateCounter
 
 counter.innerText =
 target;
-
 }
-
 }
 
 updateCounter();
-
 observer.unobserve(counter);
-
 }
-
 });
-
 },
-
 {
 
 threshold:0.5
-
 }
-
 );
 
 counters.forEach(counter=>{
-
 observer.observe(counter);
-
 });
 
 // BARRA DE PROGRESSO PREMIUM
-
 const progressBar =
 document.querySelector(
 ".scroll-progress"
@@ -172,66 +137,47 @@ document.querySelector(
 window.addEventListener(
 "scroll",
 ()=>{
-
 const scrollTop =
 document.documentElement
 .scrollTop;
-
 const height =
 document.documentElement
 .scrollHeight -
 window.innerHeight;
-
 const progress =
 (scrollTop / height)
 * 100;
-
 progressBar.style.width =
 progress + "%";
-
 }
 );
 
 // VOLTAR AO TOPO
-
 const backToTop =
 document.querySelector(".back-to-top");
-
 if(backToTop){
-
 window.addEventListener(
 "scroll",
 function(){
-
 if(window.scrollY > 300){
-
 backToTop.classList.add(
 "show"
 );
 
 }else{
-
 backToTop.classList.remove(
 "show"
 );
-
 }
-
 }
 );
 
 backToTop.addEventListener(
 "click",
 function(){
-
 window.scrollTo({
-
 top:0,
-
 behavior:"smooth"
-
 });
-
 });
-
 }
