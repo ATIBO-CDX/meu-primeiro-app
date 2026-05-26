@@ -157,20 +157,16 @@ progress + "%";
 document.addEventListener(
 "DOMContentLoaded",
 function(){
-
 const backToTop =
 document.querySelector(
 ".back-to-top"
 );
 
 if(!backToTop) return;
-
 window.addEventListener(
 "scroll",
 function(){
-
 if(window.scrollY > 300){
-
 backToTop.classList.add(
 "show"
 );
@@ -180,9 +176,7 @@ backToTop.classList.add(
 backToTop.classList.remove(
 "show"
 );
-
 }
-
 }
 );
 
@@ -191,10 +185,7 @@ function(){
 window.scrollTo({
 top:0,
 behavior:"smooth"
-
 });
-
 };
-
 }
 );
