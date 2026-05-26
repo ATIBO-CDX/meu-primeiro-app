@@ -161,3 +161,33 @@ counters.forEach(counter=>{
 observer.observe(counter);
 
 });
+
+// BARRA DE PROGRESSO PREMIUM
+
+const progressBar =
+document.querySelector(
+".scroll-progress"
+);
+
+window.addEventListener(
+"scroll",
+()=>{
+
+const scrollTop =
+document.documentElement
+.scrollTop;
+
+const height =
+document.documentElement
+.scrollHeight -
+window.innerHeight;
+
+const progress =
+(scrollTop / height)
+* 100;
+
+progressBar.style.width =
+progress + "%";
+
+}
+);
