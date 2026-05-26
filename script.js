@@ -152,34 +152,46 @@ progress + "%";
 }
 );
 
-<script>
+// VOLTAR AO TOPO
 
 const backToTop =
-document.getElementById("backToTop");
+document.querySelector(".back-to-top");
 
-window.addEventListener("scroll", function(){
+if(backToTop){
 
-    if(window.scrollY > 300){
+window.addEventListener(
+"scroll",
+function(){
 
-        backToTop.style.display = "block";
+if(window.scrollY > 300){
 
-    }else{
+backToTop.classList.add(
+"show"
+);
 
-        backToTop.style.display = "none";
+}else{
 
-    }
+backToTop.classList.remove(
+"show"
+);
+
+}
+
+}
+);
+
+backToTop.addEventListener(
+"click",
+function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
 
 });
 
-backToTop.addEventListener("click", function(){
-
-    window.scrollTo({
-
-        top:0,
-        behavior:"smooth"
-
-    });
-
 });
 
-</script>
+}
