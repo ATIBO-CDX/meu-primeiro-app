@@ -154,10 +154,16 @@ progress + "%";
 
 // VOLTAR AO TOPO
 
-const backToTop =
-document.querySelector(".back-to-top");
+document.addEventListener(
+"DOMContentLoaded",
+function(){
 
-if(backToTop){
+const backToTop =
+document.querySelector(
+".back-to-top"
+);
+
+if(!backToTop) return;
 
 window.addEventListener(
 "scroll",
@@ -180,18 +186,15 @@ backToTop.classList.remove(
 }
 );
 
-backToTop.addEventListener(
-"click",
+backToTop.onclick =
 function(){
-
 window.scrollTo({
-
 top:0,
-
 behavior:"smooth"
 
 });
 
-});
+};
 
 }
+);
